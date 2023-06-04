@@ -15,8 +15,8 @@ class UserLoginForm(AuthenticationForm):
 
     def __init__(self,  *args, **kwargs):
         super(UserLoginForm, self).__init__(*args, **kwargs)
-        for field_name, fieled in self.fields.items():
-            fieled.widget.attrs['class'] = 'form-control py-4'
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'form-control py-4'
 
 
 class UserRegistrationForm(UserCreationForm):
